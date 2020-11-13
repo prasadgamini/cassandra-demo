@@ -1,0 +1,9 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: sampleks
+      port: 9042
+      connection:
+        connect-timeout: 5s
+      contact-points: localhost
+      local-datacenter: datacenter1
