@@ -27,28 +27,21 @@ public class UserRepoTest {
 
 
     private String generateRandomString() {
-        char[] chars = {'A', 'B', 'C', 'D', 'E',};
-
         char ch1 = (char) (new Random().nextInt(25) + 'A');
         char ch2 = (char) (new Random().nextInt(25) + 'A');
         char ch3 = (char) (new Random().nextInt(25) + 'A');
-
-        return "" + ch1 + ch2 + ch3;
+        return new String(new char[]{ch1, ch2, ch3});
     }
 
     private Map<String, String> generateFavorites() {
         Map<String, String> favoritesMap = new HashMap<>();
-
         String[] categories = {"Movie", "City", "Sport"};
-        String[] movies = {"Avengers", "Mission Impossible", "Kung Fu Panda", "How to train your dragon","The Justice League"};
+        String[] movies = {"Avengers", "Mission Impossible", "Kung Fu Panda", "How to train your dragon", "The Justice League"};
         String[] cities = {"New York", "Washington DC", "Dallas", "London", "Chicago"};
         String[] sports = {"Base Ball", "Cricket", "Golf", "Ping Pong", "Soccer"};
-
         favoritesMap.put(categories[0], movies[new Random().nextInt(movies.length)]);
         favoritesMap.put(categories[1], cities[new Random().nextInt(cities.length)]);
         favoritesMap.put(categories[2], sports[new Random().nextInt(sports.length)]);
-
-
         return favoritesMap;
     }
 }
